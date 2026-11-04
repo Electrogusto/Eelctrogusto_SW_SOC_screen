@@ -1,0 +1,82 @@
+CMake Error at C:/Espressif/v5.3.6/esp-idf/tools/cmake/component.cmake:230 (message):
+  CMake Warning (dev) at build_properties.temp.cmake:8:
+
+    Syntax Warning in cmake code at column 106
+
+  
+
+    Argument not separated from preceding token by whitespace.
+
+  Call Stack (most recent call first):
+
+    C:/Espressif/v5.3.6/esp-idf/tools/cmake/scripts/component_get_requirements.cmake:3 (include)
+
+  This warning is for project developers.  Use -Wno-dev to suppress it.
+
+
+
+  CMake Warning (dev) at
+  C:/Users/Harry/ESP_Practice/Rover_P6_175_Guage/main/CMakeLists.txt:2:
+
+    Syntax Warning in cmake code at column 96
+
+  
+
+    Argument not separated from preceding token by whitespace.
+
+  Call Stack (most recent call first):
+
+    C:/Espressif/v5.3.6/esp-idf/tools/cmake/scripts/component_get_requirements.cmake:107 (include)
+    C:/Espressif/v5.3.6/esp-idf/tools/cmake/scripts/component_get_requirements.cmake:160 (__component_get_requirements)
+
+  This warning is for project developers.  Use -Wno-dev to suppress it.
+
+
+
+  CMake Warning (dev) at
+  C:/Users/Harry/ESP_Practice/Rover_P6_175_Guage/main/CMakeLists.txt:3:
+
+    Syntax Warning in cmake code at column 19
+
+  
+
+    Argument not separated from preceding token by whitespace.
+
+  Call Stack (most recent call first):
+
+    C:/Espressif/v5.3.6/esp-idf/tools/cmake/scripts/component_get_requirements.cmake:107 (include)
+    C:/Espressif/v5.3.6/esp-idf/tools/cmake/scripts/component_get_requirements.cmake:160 (__component_get_requirements)
+
+  This warning is for project developers.  Use -Wno-dev to suppress it.
+
+
+
+  CMake Error at
+  C:/Users/Harry/ESP_Practice/Rover_P6_175_Guage/main/CMakeLists.txt:5:
+
+    Parse error.  Function missing ending ")".  Instead found unterminated
+    string with text "
+
+  
+
+        REQUIRES driver esp_lcd esp_timer lvgl
+
+  
+
+    )".
+
+  Call Stack (most recent call first):
+
+    C:/Espressif/v5.3.6/esp-idf/tools/cmake/scripts/component_get_requirements.cmake:107 (include)
+    C:/Espressif/v5.3.6/esp-idf/tools/cmake/scripts/component_get_requirements.cmake:160 (__component_get_requirements)
+
+  
+
+
+
+Call Stack (most recent call first):
+  C:/Espressif/v5.3.6/esp-idf/tools/cmake/build.cmake:627 (__component_get_requirements)
+  C:/Espressif/v5.3.6/esp-idf/tools/cmake/project.cmake:722 (idf_build_process)
+  CMakeLists.txt:3 (project)
+
+
