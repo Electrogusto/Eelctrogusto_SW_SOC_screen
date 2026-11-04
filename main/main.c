@@ -191,12 +191,6 @@ void app_main(void)
     vTaskDelay(pdMS_TO_TICKS(1500));
     request_can(0x02, 0x02, 0x00, 0x00, 0x02, 0x00);
 
-    
-
-    
-
-    
-    
 
     gauge_data_t data;
     
@@ -210,12 +204,6 @@ void app_main(void)
     printf("setup complete\n");
     s_setup_done = true;
 
-
-
-    // if (task_created != pdPASS) {
-    //     ESP_LOGE(TAG, "Failed to create LVGL task");
-    //     abort();
-    // }
 
 
     
@@ -239,6 +227,7 @@ void app_main(void)
             printf("data expired\n");
         } else {
             expired_data = false;
+
         }
 
         

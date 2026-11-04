@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "ev_gauge",
-    "project_version":    "1",
+    "project_version":    "821964a-dirty",
     "project_path":       "C:/Users/Harry/ESP_Practice/Rover_P6_175_Guage",
     "idf_path":           "C:/Espressif/v5.3.6/esp-idf",
     "build_dir":          "C:/Users/Harry/ESP_Practice/Rover_P6_175_Guage/build",
