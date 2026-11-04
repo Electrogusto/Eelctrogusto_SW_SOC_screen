@@ -123,7 +123,7 @@ void gauge_ui_update_driving(const gauge_data_t *d) {
     char text[32];
 
     // Only update widgets whose underlying values have changed.
-    if (fabsf(d->soc_percent - previous_driving.soc_percent) >= 0.1f) {
+    if (abs(d->soc_percent - previous_driving.soc_percent) >= 0.1f) {
         uint32_t soc_colour = COL_SOC_LOW;
         if (d->soc_percent < 0) {
             snprintf(text, sizeof(text), "-");
@@ -164,7 +164,7 @@ void gauge_ui_update_charging(const gauge_data_t *d) {
 
     // Only update widgets whose underlying values have changed.
     // soc
-    if (fabsf(d->soc_percent - previous_charging.soc_percent) >= 0.1f) {
+    if (abs(d->soc_percent - previous_charging.soc_percent) >= 0.1f) {
         uint32_t soc_colour = COL_SOC_LOW;
         if (d->soc_percent < 0) {
             snprintf(soc_text, sizeof(soc_text), "-");
