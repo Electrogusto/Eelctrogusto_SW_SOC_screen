@@ -68,9 +68,10 @@ static bool decode_can_frame(const twai_message_t *msg, gauge_data_t *d)
         // pack summary
         
         float voltage = ((msg->data[3] << 8) | (msg->data[2])) * 0.1;
-        float current = ((msg->data[5] << 8) | (msg->data[4])) * 0.1;
-        d->power_kw = voltage * current / 1000;
-        printf("pack summary: %fV, %fA, %lfkW\n", voltage, current, d->power_kw);
+        uint16_t raw_current = ((msg->data[5] << 8) | (msg->data[4]));
+        int16_t current = (int16_t) raw_current;
+        d->power_kw = -1 * voltage * current / 1000;
+        printf("pack summary: %fV, %dA, %lfkW\n", voltage, current, d->power_kw);
         return true;
     }
 
