@@ -189,11 +189,9 @@ void gauge_ui_update_charging(const gauge_data_t *d) {
 
     // charge kw
     if (fabsf(d->power_kw - previous_charging.power_kw) >= 0.1f) {
-        if (d->power_kw < 0) {
-            snprintf(charge_text, sizeof(charge_text), "-");
-        } else {
-            snprintf(charge_text, sizeof(charge_text), "%.f", d->power_kw);
-        }
+
+        snprintf(charge_text, sizeof(charge_text), "%.f", d->power_kw * -1);
+
         lv_label_set_text(charge_value, charge_text);
         previous_charging.power_kw = d->power_kw;
         lv_obj_align(charge_value, LV_ALIGN_TOP_RIGHT, -60, 20);
