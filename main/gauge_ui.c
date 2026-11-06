@@ -188,18 +188,33 @@ void gauge_ui_update_charging(const gauge_data_t *d) {
     }
 
     // charge kw
-    if (fabsf(d->charge_kw - previous_charging.charge_kw) >= 0.1f) {
-        if (d->charge_kw < 0) {
+    if (fabsf(d->power_kw - previous_charging.power_kw) >= 0.1f) {
+        if (d->power_kw < 0) {
             snprintf(charge_text, sizeof(charge_text), "-");
         } else {
-            snprintf(charge_text, sizeof(charge_text), "%.f", d->charge_kw);
+            snprintf(charge_text, sizeof(charge_text), "%.f", d->power_kw);
         }
         lv_label_set_text(charge_value, charge_text);
-        previous_charging.charge_kw = d->charge_kw;
+        previous_charging.power_kw = d->power_kw;
         lv_obj_align(charge_value, LV_ALIGN_TOP_RIGHT, -60, 20);
         lv_obj_update_layout(charge_value);
         lv_obj_align_to(charge_unit, charge_value, LV_ALIGN_BOTTOM_RIGHT, CHARGE_UNIT_DX, CHARGE_UNIT_DY);
     }
+
+
+    // old
+    // if (fabsf(d->charge_kw - previous_charging.charge_kw) >= 0.1f) {
+    //     if (d->charge_kw < 0) {
+    //         snprintf(charge_text, sizeof(charge_text), "-");
+    //     } else {
+    //         snprintf(charge_text, sizeof(charge_text), "%.f", d->charge_kw);
+    //     }
+    //     lv_label_set_text(charge_value, charge_text);
+    //     previous_charging.charge_kw = d->charge_kw;
+    //     lv_obj_align(charge_value, LV_ALIGN_TOP_RIGHT, -60, 20);
+    //     lv_obj_update_layout(charge_value);
+    //     lv_obj_align_to(charge_unit, charge_value, LV_ALIGN_BOTTOM_RIGHT, CHARGE_UNIT_DX, CHARGE_UNIT_DY);
+    // }
 }
 
 
